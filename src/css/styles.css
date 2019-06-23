@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+p {
+  @apply mb-4;
+  @apply leading-normal;
+}
+
+.container {
+  @apply px-5;
+}
+
+@tailwind utilities;
