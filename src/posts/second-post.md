@@ -4,7 +4,7 @@ date: '2019-06-23'
 slug: 'second-post'
 type: 'post'
 template: 'post'
-featuredpost: true
+featuredpost: false
 description: null
 featuredimage: null
 ---

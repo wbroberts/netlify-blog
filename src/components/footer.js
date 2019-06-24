@@ -1,7 +1,7 @@
 import React from 'react';
 
 const footer = ({ author }) => (
-  <div className="bg-teal-900 text-white h-32 font-sans">
+  <div className="bg-pink-300 text-white h-32 font-sans">
     <footer className="container m-auto">
       © {new Date().getFullYear()}, Built with
       {` `}

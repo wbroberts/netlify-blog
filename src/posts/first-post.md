@@ -7,6 +7,9 @@ template: 'post'
 featuredpost: true
 description: null
 featuredimage: null
+tags:
+  - 'lorem ipsum'
+  - useless
 ---
 
 #Hello!

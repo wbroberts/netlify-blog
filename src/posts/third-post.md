@@ -2,10 +2,10 @@
 template: post
 title: Third Post
 slug: 'third-post'
-type: post
+type: 'post'
 date: 2019-06-23T21:59:16.266Z
 description: A useless post.
-featuredpost: true
+featuredpost: false
 featuredimage: /images/gatsby-astronaut.png
 tags:
   - useless

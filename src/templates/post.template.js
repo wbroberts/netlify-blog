@@ -9,19 +9,23 @@ export default class PostTemplate extends Component {
 
     return (
       <Layout>
-        <div className="flex flex-col my-6">
-          <h1 className="text-3xl font-bold">
-            {markdownRemark.frontmatter.title}
-          </h1>
-          <p className="text-base italic">{markdownRemark.frontmatter.date}</p>
-        </div>
+        <div className="container m-auto">
+          <div className="flex flex-col my-6">
+            <h1 className="text-3xl font-bold">
+              {markdownRemark.frontmatter.title}
+            </h1>
+            <p className="text-base italic">
+              {markdownRemark.frontmatter.date}
+            </p>
+          </div>
 
-        <div
-          className="mb-8"
-          dangerouslySetInnerHTML={{
-            __html: markdownRemark.html,
-          }}
-        />
+          <div
+            className="mb-8 text-lg"
+            dangerouslySetInnerHTML={{
+              __html: markdownRemark.html,
+            }}
+          />
+        </div>
       </Layout>
     );
   }

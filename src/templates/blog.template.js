@@ -2,11 +2,11 @@ import React from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo';
-import Archive from '../components/archive';
+import BlogList from '../components/blog-list';
 
 export const BlogTemplate = ({ title, html }) => (
-  <div>
-    <h1 className="my-6 text-3xl font-bold">{title}</h1>
+  <div className="container m-auto">
+    <h1 className="mb-6 text-3xl font-bold">{title}</h1>
     <div
       dangerouslySetInnerHTML={{
         __html: html,
@@ -22,7 +22,7 @@ const BlogPage = ({ data }) => {
     <Layout>
       <SEO title={frontmatter.title}></SEO>
       <BlogTemplate title={frontmatter.title} html={html}></BlogTemplate>
-      <Archive></Archive>
+      <BlogList></BlogList>
     </Layout>
   );
 };

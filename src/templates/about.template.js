@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 
 export const AboutTemplate = ({ title, html }) => (
   <div>
-    <h1 className="my-6 text-3xl font-bold">{title}</h1>
+    <h1 className="mb-6 text-3xl font-bold">{title}</h1>
     <div
       dangerouslySetInnerHTML={{
         __html: html,

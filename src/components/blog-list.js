@@ -2,11 +2,11 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import PostPreview from './post-preview';
 
-const blogPostArchiveQuery = graphql`
-  query BlogPostArchive {
+const blogListQuery = graphql`
+  query BlogList {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "post" } } }
-      limit: 5
+      limit: 10
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       totalCount
@@ -25,13 +25,13 @@ const blogPostArchiveQuery = graphql`
   }
 `;
 
-const Archive = () => {
-  const data = useStaticQuery(blogPostArchiveQuery);
+const BlogList = () => {
+  const data = useStaticQuery(blogListQuery);
   const { edges, totalCount } = data.allMarkdownRemark;
 
   return (
     <>
-      <aside>
+      <aside className="container m-auto">
         <div className="flex items-center mb-6">
           <h2 className="font-semibold text-xl mr-6">Archive</h2>
           <span>{totalCount} Posts</span>
@@ -42,6 +42,7 @@ const Archive = () => {
             const { node: post } = node;
             return (
               <PostPreview
+                key={post.frontmatter.slug}
                 title={post.frontmatter.title}
                 date={post.frontmatter.date}
                 slug={post.frontmatter.slug}
@@ -55,4 +56,4 @@ const Archive = () => {
   );
 };
 
-export default Archive;
+export default BlogList;
