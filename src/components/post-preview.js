@@ -4,10 +4,10 @@ import { Link } from 'gatsby';
 const PostPreview = ({ title, date, slug, excerpt }) => (
   <article className="border rounded p-4 mb-8">
     <header>
-      <h2 className="text-xl font-semibold">
+      <h2 className="text-3xl font-semibold">
         <Link to={`/blog/${slug}`}>{title}</Link>
       </h2>
-      <p className="italic">{date}</p>
+      <p className="italic text-gray-600">{date}</p>
     </header>
     <p>{excerpt}</p>
 

@@ -13,6 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 slug
                 template
+                type
               }
             }
           }

@@ -1,8 +1,10 @@
 import React from 'react';
-import Layout from '../components/layout';
 import { graphql } from 'gatsby';
+
+import Layout from '../components/layout';
 import SEO from '../components/seo';
 import BlogList from '../components/blog-list';
+import Archive from '../components/archive';
 
 export const BlogTemplate = ({ title, html }) => (
   <div className="container m-auto">
@@ -21,8 +23,13 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title}></SEO>
-      <BlogTemplate title={frontmatter.title} html={html}></BlogTemplate>
-      <BlogList></BlogList>
+      <div className="flex">
+        <div>
+          <BlogTemplate title={frontmatter.title} html={html}></BlogTemplate>
+          <BlogList></BlogList>
+        </div>
+        <Archive></Archive>
+      </div>
     </Layout>
   );
 };
