@@ -100,11 +100,8 @@ collections:
                           label: Account,
                           name: account,
                           widget: select,
-                          options: { label: Instagram, value: instagram },
-                          { label: Facebook, value: facebook },
-                          { label: Youtube, value: youtube },
-                          { label: Twitter, value: twitter },
-                          { label: Podcast, value: podcast },
+                          options:
+                            [instagram, twitter, facebook, podcast, youtube],
                         },
                         { label: Link, name: link, widget: string },
                         {

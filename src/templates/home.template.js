@@ -43,7 +43,7 @@ export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
             </p>
 
             <Link to="/contact">
-              <button className="btn bg-pink-400 px-8 py-2 mb-8 rounded-full text-white text-xl hover:bg-pink-200 outline-none focus:outline-none">
+              <button className="btn bg-pink-500 px-8 py-2 mb-8 rounded-full text-white text-xl hover:bg-pink-400 outline-none focus:outline-none">
                 {buttontext}
               </button>
             </Link>
