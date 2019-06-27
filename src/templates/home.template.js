@@ -51,12 +51,15 @@ export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
             <div className="flex items-center justify-center">
               <div className="w-full text-2xl text-gray-600">
                 {socialmedia.map(acc => {
+                  const classes = ['btn', 'no-underline', 'p-2'];
+                  const withHover = [...classes, `hover:text-${acc.color}-700`];
+
                   return (
                     <a
                       key={acc.link}
                       href={acc.link}
                       target="blank"
-                      className={`btn no-underline p-2 hover:text-${acc.color}-700`}
+                      className={withHover.join(' ')}
                     >
                       <FontAwesomeIcon icon={['fab', acc.account]} />
                     </a>
