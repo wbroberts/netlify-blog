@@ -2,9 +2,9 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const Header = ({ siteTitle }) => (
-  <header className="bg-white py-4 font-sans">
+  <header className="bg-white font-sans">
     <div className="container m-auto flex justify-between items-center text-gray-600">
-      <h1 className="text-xl font-light">
+      <h1 className="text-xl font-light my-3">
         <Link to="/">{siteTitle}</Link>
       </h1>
 
@@ -12,8 +12,8 @@ const Header = ({ siteTitle }) => (
         <ul className="flex list-none">
           <li className="m-0 ml-4">
             <Link
-              className="p-2 w-8"
-              activeClassName="font-semibold text-pink-900"
+              className="p-2 w-8 py-3 border-pink-600"
+              activeClassName="font-semibold text-pink-600 border-b"
               to="/"
             >
               Home
@@ -21,8 +21,8 @@ const Header = ({ siteTitle }) => (
           </li>
           <li className="m-0 ml-4">
             <Link
-              className="p-2 w-8"
-              activeClassName="font-semibold text-pink-900"
+              className="p-2 w-8 py-3 border-pink-600"
+              activeClassName="font-semibold text-pink-600 border-b"
               to="/about"
             >
               About
@@ -30,8 +30,8 @@ const Header = ({ siteTitle }) => (
           </li>
           <li className="m-0 ml-4">
             <Link
-              className="p-2 w-8"
-              activeClassName="font-semibold text-pink-900"
+              className="p-2 w-8 py-3 border-pink-600"
+              activeClassName="font-semibold text-pink-600 border-b"
               to="/blog"
             >
               Blog
@@ -39,8 +39,8 @@ const Header = ({ siteTitle }) => (
           </li>
           <li className="m-0 ml-4">
             <Link
-              className="p-2 w-8"
-              activeClassName="font-semibold text-pink-900"
+              className="p-2 w-8 py-3 border-pink-600"
+              activeClassName="font-semibold text-pink-600 border-b"
               to="/contact"
             >
               Contact

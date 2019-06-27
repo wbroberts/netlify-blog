@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title}></SEO>
-      <div className="flex">
+      <div className="container m-auto flex">
         <div>
           <BlogTemplate title={frontmatter.title} html={html}></BlogTemplate>
           <BlogList></BlogList>

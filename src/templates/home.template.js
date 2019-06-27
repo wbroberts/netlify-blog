@@ -6,20 +6,36 @@ import FeaturedList from '../components/featured-list';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link } from 'gatsby';
 
-export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
+export const HomePageTemplate = ({
+  heading,
+  subheading,
+  main,
+  contact,
+  featuredimage,
+}) => {
   const { title, image, description } = main;
   const { buttontext, socialmedia } = contact;
 
   return (
     <div>
-      <div style={{ minHeight: '60vh' }}>
-        <h1>{heading}</h1>
-        <h3>{subheading}</h3>
+      <div
+        className="bg-gray-100 flex flex-col w-full justify-center items-center relative"
+        style={{ minHeight: '60vh' }}
+      >
+        <div className="z-10 text-center">
+          <h1 className="text-6xl tracking-wider font-thin">{heading}</h1>
+          <h3 className="text-xl font-light">{subheading}</h3>
+        </div>
+        <img
+          style={{ zIndex: '0', width: '200px', bottom: '0', left: '50px' }}
+          className="absolute"
+          src={featuredimage}
+        />
       </div>
 
       <section className="bg-white relative">
         <div className="container mx-auto px-4 flex flex-wrap h-full">
-          <div className="md:w-px-400 overflow-hidden relative py-10">
+          <div className="bg-teal-600 md:w-px-400 overflow-hidden relative py-10">
             <img
               className="absolute"
               style={{
@@ -32,15 +48,13 @@ export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
             />
           </div>
           <div className="flex-1 flex flex-col justify-center items-center h-full py-10">
-            <h1 className="text-5xl tracking-wide text-grey-700 font-light">
+            <h1 className="text-5xl tracking-wide text-gray-600 font-thin">
               {title}
             </h1>
 
-            <div className="border-b border-green w-3/4 mt-4 mb-6" />
+            <div className="border-b border-teal-600 w-3/4 mt-4 mb-6" />
 
-            <p className="text-xl text-grey-600 leading-normal mb-8">
-              {description}
-            </p>
+            <p className="text-xl leading-normal mb-8">{description}</p>
 
             <Link to="/contact">
               <button className="btn bg-pink-500 px-8 py-2 mb-8 rounded-full text-white text-xl hover:bg-pink-400 outline-none focus:outline-none">
@@ -49,7 +63,7 @@ export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
             </Link>
 
             <div className="flex items-center justify-center">
-              <div className="w-full text-2xl text-gray-600">
+              <div className="w-full text-2xl text-pink-300">
                 {socialmedia.map(acc => {
                   const classes = ['btn', 'no-underline', 'p-2', 'social'];
                   const withHover = [...classes, `hover-${acc.color}`];
@@ -70,9 +84,6 @@ export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
           </div>
         </div>
       </section>
-      <section className="h-56 bg-teal-600">
-        <FeaturedList></FeaturedList>
-      </section>
     </div>
   );
 };
@@ -81,13 +92,14 @@ const HomePage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
 
   return (
-    <Layout hero={page.featuredimage ? page.featuredimage : null}>
+    <Layout>
       <SEO title={page.title}></SEO>
       <HomePageTemplate
         heading={page.heading}
         subheading={page.subheading}
         main={page.main}
         contact={page.contact}
+        featuredimage={page.featuredimage}
       ></HomePageTemplate>
     </Layout>
   );

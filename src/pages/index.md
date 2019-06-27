@@ -3,7 +3,7 @@ template: home
 slug: ''
 type: page
 title: Home
-featuredimage: /images/hero-home.png
+featuredimage: /images/maeve-home.png
 heading: Welcome
 subheading: This is my blog
 main:
@@ -29,4 +29,3 @@ contact:
       color: blue
       link: 'https://www.facebook.com/takesometimeoffpodcast/'
 ---
-
