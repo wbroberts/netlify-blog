@@ -15,23 +15,23 @@ p {
   transition: color ease-out 250ms;
 }
 
-.social.hover-blue:hover {
+.hover-blue:hover {
   @apply text-blue-700;
 }
 
-.social.hover-pink:hover {
+.hover-pink:hover {
   @apply text-pink-700;
 }
 
-.social.hover-red:hover {
+.hover-red:hover {
   @apply text-red-700;
 }
 
-.social.hover-lightblue:hover {
+.hover-lightblue:hover {
   @apply text-blue-400;
 }
 
-.social.hover-purple:hover {
+.hover-purple:hover {
   @apply text-purple-700;
 }
 
