@@ -6,72 +6,153 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: 'posts'
-    label: 'Posts'
-    folder: 'src/pages/blog/posts'
+  - name: posts
+    label: Posts
+    folder: src/pages/blog/posts
     create: true
     delete: true
-    slug: '{{title}}'
+    slug: {{title}}
     fields:
       - {
-          label: 'Template Key',
-          name: 'template',
-          widget: 'hidden',
-          default: 'post',
+          label: Template Key,
+          name: template,
+          widget: hidden,
+          default: post,
         }
-      - { name: 'type', default: 'post', widget: 'hidden' }
+      - { name: type, default: post, widget: hidden }
       - {
-          name: 'author',
-          label: 'Author',
+          name: author,
+          label: Author,
           widget: string,
-          default: 'Maeve Wall',
+          default: Maeve Wall,
         }
       - {
-          label: 'Slug',
-          name: 'slug',
-          widget: 'string',
-          hint: 'White spaces are not allowed. Please use a "-".',
+          label: Slug,
+          name: slug,
+          widget: string,
+          hint: White spaces are not allowed. Please use a "-".,
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Featured Post', name: 'featuredpost', widget: 'boolean' }
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: text }
+      - { label: Featured Post, name: featuredpost, widget: boolean }
       - {
-          label: 'Featured Image',
-          name: 'featuredimage',
+          label: Featured Image,
+          name: featuredimage,
           required: false,
           widget: image,
         }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: 'tags', required: false, widget: 'list' }
-  - name: 'pages'
-    label: 'Pages'
+      - { label: Body, name: body, widget: markdown }
+      - { label: Tags, name: tags, required: false, widget: list }
+  - name: pages
+    label: Pages
     files:
-      - file: 'src/pages/about/index.md'
-        label: 'About Page'
+      - file: src/pages/about/index.md
+        label: About Page
         name: about
         fields:
          - {
-              label: 'Template',
-              name: 'template',
-              widget: 'hidden',
-              default: 'about',
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: about,
             }
-        - {
-            label: 'slug',
-            name: 'slug',
-            widget: hidden,
-            default: 'about',
-          }
-        - {
-            label: 'Type',
-            name: 'type',
-            widget: hidden,
-            default: 'page',
-          }
-        - {
-            label: 'Title',
-            name: title,
-            widget: string
-          }
-        - { label: 'Description', name: 'description', widget: text }
+          - {
+              label: slug,
+              name: slug,
+              widget: hidden,
+              default: about,
+            }
+          - {
+              label: Type,
+              name: type,
+              widget: hidden,
+              default: page,
+            }
+          - {
+              label: Title,
+              name: title,
+              widget: string
+            }
+          - { label: Description, name: description, widget: text }
+      - file: src/pages/index.md
+        label: Home Page
+        name: home
+        fields:
+          - {
+              label: template,
+              name: template,
+              widget: hidden,
+              default: home
+            }
+          - {
+              label: slug,
+              name: slug,
+              widget: hidden,
+              default: '',
+            }
+          - {
+              label: Type,
+              name: type,
+              widget: hidden,
+              default: page,
+            }
+          - {
+              label: Title,
+              name: title,
+              widget: string,
+              default: Home
+            }
+          - { label: Hero Image, name: featuredimage, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Sub-heading, name: subheading, widget: string, required: false }
+          - {
+              label: Main,
+              name: main,
+              widget: object,
+              fields: 
+                [ 
+                  { 
+                    label: Main Image, 
+                    name: image, 
+                    widget: object, 
+                    fields: 
+                      [
+                        { label: Source, name: link, widget: image },
+                        { label: Description, name: alt, widget: string }
+                      ]
+                  },
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: markdown },
+                ]
+            }
+          - {
+              label: Contact,
+              name: contact,
+              widget: object,
+              fields:
+                [
+                  { label: Button Text, name: buttontext, widget: string },
+                  { 
+                    label: Social Media, 
+                    name: socialmedia, 
+                    widget: list,
+                    required: false,
+                    fields:
+                      [
+                        { label: Account,
+                          name: account,
+                          widget: select,
+                          options:  
+                            - { label: Instagram, value: instagram }
+                            - { label: Facebook, value: facebook }
+                            - { label: Youtube, value: youtube }
+                            - { label: Twitter, value: twitter }
+                            - { label: Podcast, value: podcast }
+                        },
+                        { label: Link, name: link, widget: string },
+                        { label: Hover Color, name: color, widget: select, options: [ "blue", "pink", "red", "purple", "lightblue" ] }
+                      ] 
+                  }
+                ]
+            }

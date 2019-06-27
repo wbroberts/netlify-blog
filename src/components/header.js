@@ -2,8 +2,8 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const Header = ({ siteTitle }) => (
-  <header className="bg-pink-500 py-4 font-sans">
-    <div className="container m-auto flex justify-between items-center text-white">
+  <header className="bg-white py-4 font-sans">
+    <div className="container m-auto flex justify-between items-center text-gray-600">
       <h1 className="text-xl font-light">
         <Link to="/">{siteTitle}</Link>
       </h1>
