@@ -50,7 +50,6 @@ module.exports = {
       options: {
         tailwind: true,
         purgeOnly: ['/src/css/styles.css'],
-        printRejected: true,
       },
     },
     'gatsby-plugin-netlify',
