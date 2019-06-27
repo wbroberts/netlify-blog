@@ -11,21 +11,11 @@ collections:
     folder: src/pages/blog/posts
     create: true
     delete: true
-    slug: {{title}}
+    slug: { { title } }
     fields:
-      - {
-          label: Template Key,
-          name: template,
-          widget: hidden,
-          default: post,
-        }
+      - { label: Template Key, name: template, widget: hidden, default: post }
       - { name: type, default: post, widget: hidden }
-      - {
-          name: author,
-          label: Author,
-          widget: string,
-          default: Maeve Wall,
-        }
+      - { name: author, label: Author, widget: string, default: Maeve Wall }
       - {
           label: Slug,
           name: slug,
@@ -51,80 +41,46 @@ collections:
         label: About Page
         name: about
         fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: about,
-            }
-          - {
-              label: slug,
-              name: slug,
-              widget: hidden,
-              default: about,
-            }
-          - {
-              label: Type,
-              name: type,
-              widget: hidden,
-              default: page,
-            }
-          - {
-              label: Title,
-              name: title,
-              widget: string
-            }
+          - { label: Template, name: template, widget: hidden, default: about }
+          - { label: slug, name: slug, widget: hidden, default: about }
+          - { label: Type, name: type, widget: hidden, default: page }
+          - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: text }
       - file: src/pages/index.md
         label: Home Page
         name: home
         fields:
-          - {
-              label: template,
-              name: template,
-              widget: hidden,
-              default: home
-            }
-          - {
-              label: slug,
-              name: slug,
-              widget: hidden,
-              default: '',
-            }
-          - {
-              label: Type,
-              name: type,
-              widget: hidden,
-              default: page,
-            }
-          - {
-              label: Title,
-              name: title,
-              widget: string,
-              default: Home
-            }
+          - { label: template, name: template, widget: hidden, default: home }
+          - { label: slug, name: slug, widget: hidden, default: '' }
+          - { label: Type, name: type, widget: hidden, default: page }
+          - { label: Title, name: title, widget: string, default: Home }
           - { label: Hero Image, name: featuredimage, widget: image }
           - { label: Heading, name: heading, widget: string }
-          - { label: Sub-heading, name: subheading, widget: string, required: false }
+          - {
+              label: Sub-heading,
+              name: subheading,
+              widget: string,
+              required: false,
+            }
           - {
               label: Main,
               name: main,
               widget: object,
-              fields: 
-                [ 
-                  { 
-                    label: Main Image, 
-                    name: image, 
-                    widget: object, 
-                    fields: 
+              fields:
+                [
+                  {
+                    label: Main Image,
+                    name: image,
+                    widget: object,
+                    fields:
                       [
                         { label: Source, name: link, widget: image },
-                        { label: Description, name: alt, widget: string }
-                      ]
+                        { label: Description, name: alt, widget: string },
+                      ],
                   },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: markdown },
-                ]
+                ],
             }
           - {
               label: Contact,
@@ -133,26 +89,32 @@ collections:
               fields:
                 [
                   { label: Button Text, name: buttontext, widget: string },
-                  { 
-                    label: Social Media, 
-                    name: socialmedia, 
+                  {
+                    label: Social Media,
+                    name: socialmedia,
                     widget: list,
                     required: false,
                     fields:
                       [
-                        { label: Account,
+                        {
+                          label: Account,
                           name: account,
                           widget: select,
-                          options:  
-                            - { label: Instagram, value: instagram },
-                            - { label: Facebook, value: facebook },
-                            - { label: Youtube, value: youtube },
-                            - { label: Twitter, value: twitter },
-                            - { label: Podcast, value: podcast }
+                          options: { label: Instagram, value: instagram },
+                          { label: Facebook, value: facebook },
+                          { label: Youtube, value: youtube },
+                          { label: Twitter, value: twitter },
+                          { label: Podcast, value: podcast },
                         },
                         { label: Link, name: link, widget: string },
-                        { label: Hover Color, name: color, widget: select, options: [ "blue", "pink", "red", "purple", "lightblue" ] }
-                      ] 
-                  }
-                ]
+                        {
+                          label: Hover Color,
+                          name: color,
+                          widget: select,
+                          options:
+                            ['blue', 'pink', 'red', 'purple', 'lightblue'],
+                        },
+                      ],
+                  },
+                ],
             }
