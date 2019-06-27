@@ -7,15 +7,13 @@ import {
   faYoutube,
   faFacebook,
   faTwitter,
-  // faFacebook,
-  // faTwitter,
   fab,
 } from '@fortawesome/free-brands-svg-icons';
 
 import Header from './header';
 import Footer from './footer';
 import '../css/styles.css';
-import '../css/non-purged.styles.css';
+import '../css/keep-styles.css';
 
 library.add(faInstagram, faYoutube, fab, faFacebook, faTwitter);
 
