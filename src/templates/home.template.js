@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import FeaturedList from '../components/featured-list';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 export const HomePageTemplate = ({
   heading,
@@ -26,11 +27,12 @@ export const HomePageTemplate = ({
           <h1 className="text-6xl tracking-wider font-thin">{heading}</h1>
           <h3 className="text-xl font-light">{subheading}</h3>
         </div>
-        <img
-          style={{ zIndex: '0', width: '200px', bottom: '0', left: '50px' }}
+        <div
+          style={{ zIndex: '0', bottom: '0', left: '50px' }}
           className="absolute"
-          src={featuredimage}
-        />
+        >
+          <Img fixed={featuredimage.fixed} />
+        </div>
       </div>
 
       <section className="bg-white relative">
@@ -90,6 +92,8 @@ export const HomePageTemplate = ({
 
 const HomePage = ({ data }) => {
   const { frontmatter: page } = data.markdownRemark;
+  console.log(data);
+  const { childImageSharp } = data.file;
 
   return (
     <Layout>
@@ -99,7 +103,7 @@ const HomePage = ({ data }) => {
         subheading={page.subheading}
         main={page.main}
         contact={page.contact}
-        featuredimage={page.featuredimage}
+        featuredimage={childImageSharp}
       ></HomePageTemplate>
     </Layout>
   );
@@ -132,6 +136,13 @@ export const query = graphql`
             link
             color
           }
+        }
+      }
+    }
+    file(relativePath: { eq: "maeve-home.png" }) {
+      childImageSharp {
+        fixed(width: 200) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
