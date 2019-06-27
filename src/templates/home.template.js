@@ -51,8 +51,8 @@ export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
             <div className="flex items-center justify-center">
               <div className="w-full text-2xl text-gray-600">
                 {socialmedia.map(acc => {
-                  const classes = ['btn', 'no-underline', 'p-2'];
-                  const withHover = [...classes, `hover:text-${acc.color}-700`];
+                  const classes = ['btn', 'no-underline', 'p-2', 'social'];
+                  const withHover = [...classes, `hover-${acc.color}`];
 
                   return (
                     <a
