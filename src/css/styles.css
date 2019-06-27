@@ -11,28 +11,4 @@ p {
   @apply px-5;
 }
 
-.social {
-  transition: color ease-out 250ms;
-}
-
-.hover-blue:hover {
-  @apply text-blue-700;
-}
-
-.hover-pink:hover {
-  @apply text-pink-700;
-}
-
-.hover-red:hover {
-  @apply text-red-700;
-}
-
-.hover-lightblue:hover {
-  @apply text-blue-400;
-}
-
-.hover-purple:hover {
-  @apply text-purple-700;
-}
-
 @tailwind utilities;
