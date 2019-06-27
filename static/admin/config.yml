@@ -11,7 +11,7 @@ collections:
     folder: src/pages/blog/posts
     create: true
     delete: true
-    slug: { { title } }
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: Template Key, name: template, widget: hidden, default: post }
       - { name: type, default: post, widget: hidden }
