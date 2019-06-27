@@ -5,7 +5,6 @@ import SEO from '../components/seo';
 import FeaturedList from '../components/featured-list';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link } from 'gatsby';
-import './home.template.css';
 
 export const HomePageTemplate = ({ heading, subheading, main, contact }) => {
   const { title, image, description } = main;
