@@ -15,6 +15,7 @@ import {
 import Header from './header';
 import Footer from './footer';
 import '../css/styles.css';
+import '../css/non-purged.styles.css';
 
 library.add(faInstagram, faYoutube, fab, faFacebook, faTwitter);
 
