@@ -52,6 +52,12 @@ module.exports = {
         purgeOnly: ['/src/css/styles.css'],
       },
     },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'vegandthecity',
+      },
+    },
     'gatsby-plugin-netlify',
     'gatsby-transformer-remark',
     'gatsby-plugin-offline',

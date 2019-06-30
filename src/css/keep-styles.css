@@ -21,3 +21,11 @@
 .hover-purple:hover {
   @apply text-purple-700;
 }
+
+.skew {
+  transform: skewY(5deg);
+}
+
+.z-neg {
+  z-index: -1;
+}

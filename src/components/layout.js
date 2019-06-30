@@ -30,10 +30,13 @@ const Layout = ({ children }) => {
   `);
 
   const { title, author } = data.site.siteMetadata;
+  const isHome = window.location.pathname === '/';
+  const duration = isHome ? 1000 : 0;
+  const position = isHome ? 'absolute' : 'relative';
 
   return (
     <>
-      <Header siteTitle={title} />
+      <Header siteTitle={title} fadeTime={duration} position={position} />
       <div className="font-sans text-gray-800">
         <main>{children}</main>
       </div>

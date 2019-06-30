@@ -2,10 +2,13 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import FeaturedList from '../components/featured-list';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import Fade from 'react-reveal/Fade';
+import InstagramList from '../components/instagram-list';
+import Flip from 'react-reveal/Flip';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 export const HomePageTemplate = ({
   heading,
@@ -19,23 +22,26 @@ export const HomePageTemplate = ({
 
   return (
     <div>
-      <div
-        className="bg-gray-100 flex flex-col w-full justify-center items-center relative"
-        style={{ minHeight: '60vh' }}
-      >
-        <div className="z-10 text-center">
-          <h1 className="text-6xl tracking-wider font-thin">{heading}</h1>
-          <h3 className="text-xl font-light">{subheading}</h3>
-        </div>
+      <div className="bg-pink-400 h-screen w-full relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-pink-300 opacity-50 z-30"></div>
         <div
-          style={{ zIndex: '0', bottom: '0', left: '50px' }}
+          style={{ zIndex: '0', bottom: '-5px', left: '50px' }}
           className="absolute"
         >
+          <div className="opacity-25 bg-pink-400 w-full h-full z-10"></div>
           <Img fixed={featuredimage.fixed} />
         </div>
+        <Fade bottom delay={250}>
+          <div className="h-full flex flex-col justify-center z-10 text-center text-white">
+            <h1 className="text-6xl tracking-wider font-thin z-10">
+              {heading}
+            </h1>
+            <h3 className="text-xl font-light z-10">{subheading}</h3>
+          </div>
+        </Fade>
       </div>
 
-      <section className="bg-white relative">
+      <section className="bg-white relative py-10">
         <div className="container mx-auto px-4 flex flex-wrap h-full">
           <div className="bg-teal-600 md:w-px-400 overflow-hidden relative py-10">
             <img
@@ -65,26 +71,44 @@ export const HomePageTemplate = ({
             </Link>
 
             <div className="flex items-center justify-center">
-              <div className="w-full text-2xl text-pink-300">
-                {socialmedia.map(acc => {
-                  const classes = ['btn', 'no-underline', 'p-2', 'social'];
-                  const withHover = [...classes, `hover-${acc.color}`];
+              <div className="w-full text-2xl">
+                <TransitionGroup appear={true} enter={true}>
+                  {socialmedia.map(acc => {
+                    const classes = [
+                      'btn',
+                      'no-underline',
+                      'p-2',
+                      'social',
+                      `text-${acc.color}-400`,
+                    ];
+                    const withHover = [...classes, `hover-${acc.color}`];
 
-                  return (
-                    <a
-                      key={acc.link}
-                      href={acc.link}
-                      target="blank"
-                      className={withHover.join(' ')}
-                    >
-                      <FontAwesomeIcon icon={['fab', acc.account]} />
-                    </a>
-                  );
-                })}
+                    return (
+                      <Flip duration={500} right cascade>
+                        <a
+                          key={acc.link}
+                          href={acc.link}
+                          target="blank"
+                          className={withHover.join(' ')}
+                        >
+                          <FontAwesomeIcon icon={['fab', acc.account]} />
+                        </a>
+                      </Flip>
+                    );
+                  })}
+                </TransitionGroup>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="py-10 relative overflow-y-hidden">
+        <div className="bg-gray-200 skew absolute h-full w-full z-neg"></div>
+        <div className="container m-auto">
+          <h2 className="text-2xl font-semibold py-6 z-10">@vegandthecity</h2>{' '}
+        </div>
+        <InstagramList></InstagramList>
       </section>
     </div>
   );
@@ -141,7 +165,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: "maeve-home.png" }) {
       childImageSharp {
-        fixed(width: 200) {
+        fixed(width: 400) {
           ...GatsbyImageSharpFixed
         }
       }
