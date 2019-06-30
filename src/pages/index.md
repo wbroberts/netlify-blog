@@ -5,17 +5,14 @@ type: page
 title: Home
 featuredimage: /images/maeve-home.png
 heading: Welcome
-subheading: This is my blog
+subheading: I'm Maeve Wall
 main:
   description: >
-    We sell green and roasted coffee beans that are sourced directly from
-    independent farmers and farm cooperatives. We’re proud to offer a variety of
-    coffee beans grown with great care for the environment and local
-    communities. Check our post or contact us directly for current availability.
+    I’m glad you’re here. I’m an educator, mental health and wellness advocate, certified yoga instructor, and host of the podcast “Take Some Time Off!.” Explore my offerings and content and then contact me so we can connect online and IRL!
   image:
     alt: This is not really an image
     link: /images/gatsby-icon.png
-  title: 'Hi, Im netlify-blog'
+  title: Hi, I'm Maeve!
 contact:
   buttontext: Contact
   socialmedia:

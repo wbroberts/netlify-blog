@@ -14,6 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
                 template
                 type
+                featuredimage
               }
             }
           }
@@ -34,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           });
         } else {
+          console.log(node.frontmatter);
           createPage({
             path: `/${node.frontmatter.slug}`,
             component: path.resolve(
@@ -41,6 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
             ),
             context: {
               slug: node.frontmatter.slug,
+              image: node.frontmatter.featuredimage,
             },
           });
         }

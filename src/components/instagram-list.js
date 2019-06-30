@@ -30,9 +30,9 @@ const InstagramList = () => {
 
   return (
     <div className="flex flex-no-wrap overflow-y-hidden overflow-x-scroll py-6">
-      {posts.map(({ node }) => {
+      {posts.map(({ node }, index) => {
         return (
-          <div className="mx-4 inline-block">
+          <div className="mx-4 inline-block" key={index}>
             <Img fixed={node.localFile.childImageSharp.fixed} />
           </div>
         );

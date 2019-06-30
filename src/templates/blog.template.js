@@ -17,11 +17,11 @@ export const BlogTemplate = ({ title, html }) => (
   </div>
 );
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={frontmatter.title}></SEO>
       <div className="container m-auto flex">
         <div>

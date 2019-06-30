@@ -8,7 +8,7 @@ export default class PostTemplate extends Component {
     const { markdownRemark } = this.props.data;
 
     return (
-      <Layout>
+      <Layout location={this.props.location}>
         <div className="container m-auto">
           <div className="flex flex-col my-6">
             <h1 className="text-3xl font-bold">

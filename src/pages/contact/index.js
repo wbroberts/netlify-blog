@@ -3,14 +3,26 @@ import React from 'react';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 
-const ContactPage = () => {
+const ContactPage = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Contact"></SEO>
       <div className="container m-auto py-4">
         <h1 className="text-3xl font-bold mb-8">Say Hi</h1>
 
-        <form className="flex flex-col text-xl">
+        <form
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          method="POST"
+          action="/contact/thanks"
+          className="flex flex-col text-xl"
+        >
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you're human: <input name="bot-field" />
+            </label>
+          </p>
           <div className="flex flex-col mb-6">
             <label className="my-3">Name</label>
             <input
@@ -31,7 +43,7 @@ const ContactPage = () => {
           </div>
           <div className="flex flex-col mb-6">
             <label className="my-3">Message</label>
-            <textarea className="border rounded p-2 h-32"></textarea>
+            <textarea className="border rounded p-2 h-32" required></textarea>
           </div>
 
           <button className="w-full bg-pink-900 text-white py-2">Send</button>

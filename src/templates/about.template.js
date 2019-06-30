@@ -1,8 +1,9 @@
 import React from 'react';
-import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+
 import SEO from '../components/seo';
+import Layout from '../components/layout';
 
 export const AboutTemplate = ({ title, html, image }) => (
   <div className="py-6">
@@ -24,12 +25,12 @@ export const AboutTemplate = ({ title, html, image }) => (
   </div>
 );
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { fluid } = data.file.childImageSharp;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={frontmatter.title}></SEO>
       <AboutTemplate
         title={frontmatter.title}

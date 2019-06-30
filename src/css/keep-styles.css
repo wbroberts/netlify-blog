@@ -23,9 +23,25 @@
 }
 
 .skew {
-  transform: skewY(5deg);
+  transform: skewY(3deg);
 }
 
 .z-neg {
   z-index: -1;
+}
+
+.bg-maeve-blue {
+  background: #c2e0db;
+}
+
+.text-maeve-blue {
+  color: #1f584f;
+}
+
+.bg-maeve-pink {
+  background: #ffcecf;
+}
+
+.text-maeve-pink {
+  color: #ffcecf;
 }

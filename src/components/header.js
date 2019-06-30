@@ -3,8 +3,6 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 const Header = ({ siteTitle, fadeTime, position }) => {
-  const textColor = fadeTime === 0 ? 'text-gray-600' : 'text-white';
-
   return (
     <Fade top duration={fadeTime} delay={fadeTime}>
       <header
@@ -13,9 +11,7 @@ const Header = ({ siteTitle, fadeTime, position }) => {
           position,
         }}
       >
-        <div
-          className={`container m-auto flex justify-between items-center ${textColor}`}
-        >
+        <div className="container m-auto flex justify-between items-center text-maeve-blue">
           <h1 className="text-xl font-light my-3">
             <Link to="/">{siteTitle}</Link>
           </h1>
