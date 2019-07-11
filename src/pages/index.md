@@ -8,11 +8,14 @@ heading: Welcome
 subheading: I'm Maeve Wall
 main:
   description: >
-    I’m glad you’re here. I’m an educator, mental health and wellness advocate, certified yoga instructor, and host of the podcast “Take Some Time Off!.” Explore my offerings and content and then contact me so we can connect online and IRL!
+    I’m glad you’re here. I’m an educator, mental health and wellness advocate,
+    certified yoga instructor, and host of the podcast “Take Some Time Off!.”
+    Explore my offerings and content and then contact me so we can connect
+    online and IRL!
   image:
     alt: This is not really an image
     link: /images/gatsby-icon.png
-  title: Hi, I'm Maeve!
+  title: 'Hi, I''m Maeve!'
 contact:
   buttontext: Contact
   socialmedia:
@@ -25,4 +28,11 @@ contact:
     - account: facebook
       color: blue
       link: 'https://www.facebook.com/takesometimeoffpodcast/'
+blurbs:
+  - description: I practice and teach yoga
+    image:
+      alt: Maeve
+      src: /images/Screen Shot 2019-04-06 at 9.25.15 PM.png
+    title: Yogi
 ---
+
