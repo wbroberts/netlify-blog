@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 
 import SEO from '../components/seo';
 import HeroLayout from '../components/hero-layout';
@@ -24,7 +23,7 @@ export const AboutTemplate = ({ subtitle, html }) => (
   </div>
 );
 
-const AboutPage = ({ data, location }) => {
+const DefaultPage = ({ data, location }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { fluid } = data.file.childImageSharp;
 
@@ -36,25 +35,4 @@ const AboutPage = ({ data, location }) => {
   );
 };
 
-export default AboutPage;
-
-export const query = graphql`
-  query AboutPage($image: String!) {
-    markdownRemark(frontmatter: { slug: { eq: "about" } }) {
-      html
-      frontmatter {
-        title
-        slug
-        type
-        featuredimage
-      }
-    }
-    file(absolutePath: { regex: $image }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
+export default DefaultPage;

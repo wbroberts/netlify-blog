@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 const query = graphql`
   query InstaQuery {
-    allInstaNode(limit: 5) {
+    allInstaNode(limit: 10) {
       edges {
         node {
           id
@@ -29,7 +29,7 @@ const InstagramList = () => {
   const { edges: posts } = data.allInstaNode;
 
   return (
-    <div className="flex flex-no-wrap overflow-y-hidden overflow-x-scroll py-6">
+    <div className="flex flex-no-wrap overflow-y-hidden overflow-x-scroll py-8 pr-8">
       {posts.map(({ node }, index) => {
         return (
           <div className="mx-4 inline-block" key={index}>

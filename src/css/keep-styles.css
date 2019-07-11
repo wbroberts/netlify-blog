@@ -45,3 +45,13 @@
 .text-maeve-pink {
   color: #ffcecf;
 }
+
+.blurb {
+  flex: 0 1 calc(25% - 1rem);
+}
+
+@media screen and (max-width: 40rem) {
+  .blurb {
+    flex: 0 1 calc(100% - 1rem);
+  }
+}

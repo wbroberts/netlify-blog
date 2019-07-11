@@ -27,11 +27,11 @@ const blogListQuery = graphql`
 
 const BlogList = () => {
   const data = useStaticQuery(blogListQuery);
-  const { edges, totalCount } = data.allMarkdownRemark;
+  const { edges } = data.allMarkdownRemark;
 
   return (
     <>
-      <section className="container m-auto">
+      <section>
         <ul>
           {edges.map(node => {
             const { node: post } = node;

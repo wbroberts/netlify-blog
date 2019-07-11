@@ -59,7 +59,19 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+            },
+          },
+        ],
+      },
+    },
     'gatsby-plugin-offline',
   ],
 };

@@ -46,7 +46,9 @@ const ContactPage = ({ location }) => {
             <textarea className="border rounded p-2 h-32" required></textarea>
           </div>
 
-          <button className="w-full bg-pink-900 text-white py-2">Send</button>
+          <button type="submit" className="w-full bg-pink-900 text-white py-2">
+            Send
+          </button>
         </form>
       </div>
     </Layout>

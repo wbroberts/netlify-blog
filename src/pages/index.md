@@ -4,6 +4,7 @@ slug: ''
 type: page
 title: Home
 featuredimage: /images/maeve-home.png
+backgroundimage: /images/background.png
 heading: Welcome
 subheading: I'm Maeve Wall
 main:
@@ -11,7 +12,7 @@ main:
     I’m glad you’re here. I’m an educator, mental health and wellness advocate, certified yoga instructor, and host of the podcast “Take Some Time Off!.” Explore my offerings and content and then contact me so we can connect online and IRL!
   image:
     alt: This is not really an image
-    link: /images/gatsby-icon.png
+    link: /images/maeve-yoga.jpg
   title: Hi, I'm Maeve!
 contact:
   buttontext: Contact
@@ -25,4 +26,27 @@ contact:
     - account: facebook
       color: blue
       link: 'https://www.facebook.com/takesometimeoffpodcast/'
+blurbs:
+  - image:
+      src: images/maeve-peace.jpeg
+      alt: Maeve peace sign
+    description: I'm a podcaster
+    title: Yogi
+  - image:
+      src: images/maeve-peace.jpeg
+      alt: Maeve peace sign
+    description: I'm an educator
+    title: Educator
+  - image:
+      src: images/maeve-peace.jpeg
+      alt: Maeve peace sign
+    description: >
+      I'm a phD student
+    title: Podcaster
+  - image:
+      src: images/maeve-peace.jpeg
+      alt: Maeve peace sign
+    description: >
+      I'm a phD student
+    title: Podcaster
 ---
