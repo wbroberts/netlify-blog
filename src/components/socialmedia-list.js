@@ -9,14 +9,12 @@ const SocialMediaList = ({ socialmedia }) => {
       <div className="w-full text-2xl">
         <TransitionGroup appear={true} enter={true}>
           {socialmedia.map(acc => {
-            const classes = [
-              'btn',
-              'no-underline',
-              'p-2',
-              'social',
+            const classes = ['btn', 'no-underline', 'p-2', 'social'];
+            const withHover = [
+              ...classes,
               `text-${acc.color}-400`,
+              `hover-${acc.color}`,
             ];
-            const withHover = [...classes, `hover-${acc.color}`];
 
             return (
               <Flip duration={500} right cascade key={acc.link}>

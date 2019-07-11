@@ -1,5 +1,4 @@
 import React from 'react';
-import { TransitionGroup } from 'react-transition-group';
 import Fade from 'react-reveal/Fade';
 
 const Blurbs = ({ blurbs }) => {
