@@ -19,7 +19,7 @@ collections:
       - {
           label: Slug,
           name: slug,
-          widget: string,
+          widget: hidden,
           hint: White spaces are not allowed. Please use a "-".,
         }
       - { label: Title, name: title, widget: string }
@@ -135,7 +135,7 @@ collections:
                         },
                       ],
                   },
-                  { label: Description, name: description, widget: text },
                   { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
                 ],
             }

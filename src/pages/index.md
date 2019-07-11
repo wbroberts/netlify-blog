@@ -9,7 +9,10 @@ heading: Welcome
 subheading: I'm Maeve Wall
 main:
   description: >
-    I’m glad you’re here. I’m an educator, mental health and wellness advocate, certified yoga instructor, and host of the podcast “Take Some Time Off!.” Explore my offerings and content and then contact me so we can connect online and IRL!
+    I’m glad you’re here. I’m an educator, mental health and wellness advocate,
+    certified yoga instructor, and host of the podcast “Take Some Time Off!.”
+    Explore my offerings and content and then contact me so we can connect
+    online and IRL!
   image:
     alt: This is not really an image
     link: /images/maeve-yoga.jpg
@@ -49,4 +52,9 @@ blurbs:
     description: >
       I'm a phD student
     title: Podcaster
+  - description: I practice and teach yoga
+    image:
+      alt: Maeve
+      src: /images/Screen Shot 2019-04-06 at 9.25.15 PM.png
+    title: Yogi
 ---
