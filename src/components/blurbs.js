@@ -9,11 +9,7 @@ const Blurbs = ({ blurbs }) => {
           return (
             <article
               key={blurb.title}
-              className="relative flex flex-col w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-6 overflow-hidden"
-              style={{
-                height: '300px',
-                maxWidth: '380px',
-              }}
+              className="flex-initial relative flex flex-col w-full sm:w-1/2 lg:w-1/4 px-2 mb-6 overflow-hidden"
             >
               <div className="w-full h-full border-purple-800 absolute"></div>
               <div
@@ -21,7 +17,7 @@ const Blurbs = ({ blurbs }) => {
                 style={{
                   backgroundImage: `url(${blurb.image.src})`,
                   backgroundSize: 'cover',
-                  height: '250px',
+                  height: '300px',
                 }}
               ></div>
               <h3 className="py-2 font-semibold text-lg">{blurb.title}</h3>

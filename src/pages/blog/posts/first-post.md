@@ -2,6 +2,7 @@
 template: post
 type: post
 author: Maeve Wall
+slug: first-post
 title: First Post
 date: 2019-07-11T17:26:41.812Z
 description: My first blog post
@@ -9,6 +10,7 @@ featuredpost: true
 tags:
   - Tag
 ---
+
 # Today
 
 I woke up late today.

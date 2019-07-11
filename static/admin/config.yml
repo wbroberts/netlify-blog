@@ -139,3 +139,39 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
+      - file: src/pages/take-some-time-off/index.md
+        label: Podcast Page
+        name: podcast
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: podcast,
+            }
+          - {
+              label: slug,
+              name: slug,
+              widget: hidden,
+              default: take-some-time-off,
+            }
+          - { label: Type, name: type, widget: hidden, default: page }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Image, name: featuredimage, widget: image }
+          - { label: Main, name: main, widget: markdown }
+      - file: src/pages/contact/index.md
+        label: Contact Page
+        name: contact
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: contact,
+            }
+          - { label: slug, name: slug, widget: hidden, default: contact }
+          - { label: Type, name: type, widget: hidden, default: page }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: featuredimage, widget: image }
+          - { label: Description, name: description, widget: text }

@@ -1,4 +1,5 @@
 const path = require('path');
+const { createSlug } = require('./src/utils/helpers');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -14,6 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
                 template
                 type
+                title
                 featuredimage
               }
             }

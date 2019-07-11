@@ -45,16 +45,11 @@ blurbs:
       alt: Maeve peace sign
     description: >
       I'm a phD student
-    title: Podcaster
+    title: Student
   - image:
       src: images/maeve-peace.jpeg
       alt: Maeve peace sign
     description: >
       I'm a phD student
     title: Podcaster
-  - description: I practice and teach yoga
-    image:
-      alt: Maeve
-      src: /images/Screen Shot 2019-04-06 at 9.25.15 PM.png
-    title: Yogi
 ---

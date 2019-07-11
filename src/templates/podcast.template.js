@@ -1,7 +1,8 @@
 import React from 'react';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
-import Gatsby from '../../images/podcast-logo.png';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Gatsby from '../images/podcast-logo.png';
+import { graphql } from 'gatsby';
 
 const PodcastPage = () => (
   <div className="py-8 px-6">
@@ -25,3 +26,5 @@ export default ({ location }) => {
     </Layout>
   );
 };
+
+export const query = graphql``;
