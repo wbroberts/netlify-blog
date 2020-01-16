@@ -13,5 +13,7 @@ tech_specs:
   foundation: '10'
   living_space: 10
   weight: 100
+features:
+  - Floors
 ---
 
